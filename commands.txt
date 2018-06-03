@@ -1,0 +1,5 @@
+dotnet new angular -o dotnercoreangular
+npm install
+set ASPNETCORE_ENVIRONMENT=Development
+.csproj => <ItemGroup><DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" /></ItemGroup>
+dotnet restore
