@@ -1,3 +1,4 @@
+using AutoMapper;
 using dotnetcoreangular.Data.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +17,8 @@ namespace dotnetcoreangular {
 		public IConfiguration Configuration { get; }
 
 		public void ConfigureServices(IServiceCollection services) {
+			services.AddAutoMapper();
+			
 			services.AddDbContext<AppDbContext> (options => {
 				options.UseSqlServer(Configuration.GetConnectionString("Default"));
 			});

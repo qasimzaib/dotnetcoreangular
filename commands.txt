@@ -9,3 +9,7 @@ dotnet restore
 dotnet resotre
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet ef migrations add InitialModel
+webpack --config webpack.config.vendor.js
+webpack
+dotnet add package AutoMapper
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
