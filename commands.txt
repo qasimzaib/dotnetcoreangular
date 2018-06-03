@@ -5,5 +5,7 @@ set ASPNETCORE_ENVIRONMENT=Development
 dotnet restore
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 dotnet restore
-.csproj => <ItemGroup><DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" /></ItemGroup>
+.csproj => <ItemGroup><DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.1.0-preview1-final" /></ItemGroup>
 dotnet resotre
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef migrations add InitialModel
