@@ -3,3 +3,7 @@ npm install
 set ASPNETCORE_ENVIRONMENT=Development
 .csproj => <ItemGroup><DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" /></ItemGroup>
 dotnet restore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet restore
+.csproj => <ItemGroup><DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" /></ItemGroup>
+dotnet resotre
