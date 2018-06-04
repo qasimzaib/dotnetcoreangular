@@ -1,3 +1,4 @@
+import { ManufacturerService } from './services/manufacturer.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -32,7 +33,10 @@ import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.com
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
         ])
-    ]
+	],
+	providers: [
+		ManufacturerService
+	]
 })
 export class AppModuleShared {
 }
