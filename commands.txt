@@ -13,3 +13,9 @@ webpack --config webpack.config.vendor.js
 webpack
 dotnet add package AutoMapper
 dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+
+npm install @angular/cli@latest -g
+npm install @angular/cli@latest --save-dev
+
+ng g c vehicle-form --module="app.shared.module.ts"
+D:\Woskspace\dotnetcoreangular\ClientApp\app>ng g component components/vehicle-form --module="app.shared.module.ts"
