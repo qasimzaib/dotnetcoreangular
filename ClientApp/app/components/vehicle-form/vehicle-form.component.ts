@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./vehicle-form.component.css']
 })
 export class VehicleFormComponent implements OnInit {
-	manufacturers: any;
+	manufacturers: any[];
+	models: any[];
+	vehicle: any = {};
 
 	constructor(private manufacturerService :ManufacturerService) { }
 
 	ngOnInit() {
 		this.manufacturerService.getManufacturers()
-			.subscribe(m => {
-				console.log(m);
-				this.manufacturers = m;
-				console.log("M", this.manufacturers);
-			}
-		);
+			.subscribe(m => this.manufacturers = m);
+	}
+
+	onManufacturerChange() {
+		var selectedManufacturer = this.manufacturers.find(m => m.id == this.vehicle.manufacturer)
+		this.models = selectedManufacturer ? selectedManufacturer.models : [];
 	}
 }
