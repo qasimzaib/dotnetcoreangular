@@ -21,3 +21,4 @@ ng g c vehicle-form --module="app.shared.module.ts"
 D:\Woskspace\dotnetcoreangular\ClientApp\app>ng g component components/vehicle-form --module="app.shared.module.ts"
 
 D:\Woskspace\dotnetcoreangular\ClientApp\app\services>ng g service manufacturer
+
